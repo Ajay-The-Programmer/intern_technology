@@ -15,7 +15,7 @@ var Student = /** @class */ (function () {
     };
     return Student;
 }());
-var student = new Student(24, "ajay", "Devakr");
+var student = new Student(24, "ajay", "Devkar");
 console.log(student.name);
 console.log(student.last_name);
 console.log(student.age);
