@@ -1,0 +1,84 @@
+
+Date :- 18-02-2021
+
+*Installed node.js in my system for the React
+*What is ES6(ECMAScript 2015)
+1.Classes
+2.Class Inheritance
+*React component(function component, class components)
+I installed node.js and React.js in my PC , as well as i read React component with  render function, JSX, Classes, ES6
+
+
+
+ 
+Date :- 19-02-2021
+*React Props
+*React State
+
+
+Now moved on TypeScript
+*install TypeScript using cmd
+*saw how it works 
+*variable Declaration
+*DataTypes in TypeScript
+*interface
+today i installed TypeScript and learned about TS and saw how it works and variable declaration, datatype,
+interface
+
+Date :- 20-02
+*Access Modifiers
+*function
+*arrowfunction
+*the importance of import and export modules
+
+Date :- 22-02
+* how to use module 
+*Namespace
+*ambient declaration 
+
+Date : 23-02
+* Start Learning React With Typescript
+* CMD for creact react app with typescript :- npx creact-react-app my-app --template typescript		
+* install enzyme for how components will behave. npm install -D enzyme @types/enzyme enzyme-adapter-react-16 @types/enzyme-adapter-react-16 react-test-renderer
+
+
+\\192.168.1.74\xampp\htdocs\dimandRx\resources\react
+http://192.168.1.74:8003/product-list-wheelchairs-sub-power-wheelchairs
+\\192.168.1.74\xampp\htdocs\dimandRx
+
+Date : 25-02
+* <HelmetProvider>
+*useState(dummyProducts)
+ BrowserRouter 
+router 
+switch
+
+
+/////////////////////////////////////////
+
+
+const loading : ActionCreator<IProductsLoadingAction> = () => {
+ return {
+ type: ProductsActionTypes.LOADING
+ }
+};
+
+////////////////////////////////////////
+
+  const [state, dispatch] = useReducer(CartReducer, initialState)
+
+.......................................
+
+https://reactjs.org/docs/getting-started.html
+
+
+
+
+
+
+
+
+
+
+
+
