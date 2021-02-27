@@ -1,13 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Welcome to React Application</h1>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <h1>Welcome to React Application</h1>
+        <h2>{new Date().toLocaleDateString()}</h2>
+      </div>
+    );
+  }
 }
 
 export default App;
