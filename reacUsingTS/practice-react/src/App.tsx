@@ -1,21 +1,32 @@
 import React from "react";
+
 import "./App.css";
 
-const Coder = (props: { name: string; status: string }) => {
-  return (
-    <div>
-      <h1>Welcome to React Application</h1>
-      <h2>{props.name}</h2>
-      <h3>{props.status}</h3>
-    </div>
-  );
-};
+interface DataApp {
+  name: string;
+  status: string;
+}
+
+class Coder extends React.Component<DataApp> {
+  render() {
+    return (
+      <div>
+        <h1>Welcome to React Application</h1>
+        <h2>{this.props.name}</h2>
+        <h3>{this.props.status}</h3>
+        <h4>{this.props.children}</h4>
+      </div>
+    );
+  }
+}
 
 class App extends React.Component {
   render() {
-    return (  
+    return (
       <div className="App">
-        <Coder name="Ajay" status="Programmer" />
+        <Coder name="Ajay" status="Programmer">
+          Hii
+        </Coder>
       </div>
     );
   }
