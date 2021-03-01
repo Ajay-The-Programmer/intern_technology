@@ -79,7 +79,7 @@ React Router
 *NavLink
 *withRouter
 *switch(it show first matching path component(/).....These ensure that only one component is rendered at a time)
-
+*"./:variable_name 
 
 
 

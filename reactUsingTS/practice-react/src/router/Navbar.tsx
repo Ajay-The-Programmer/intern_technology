@@ -32,4 +32,4 @@ function Navbar(props:any) {
   );
 }
 
-export default withRouter(Navbar);
+export default withRouter(Navbar); 

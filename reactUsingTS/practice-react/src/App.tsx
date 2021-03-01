@@ -4,7 +4,9 @@ import "./App.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./components/shared/Home";
 import About from "./components/shared/About";
-import Error from "./components/Error"
+import Error from "./components/Error";
+import Profile from "./components/Profile";
+
 
 // interface DataApp {
 //   name: string;
@@ -30,10 +32,10 @@ class App extends React.Component {
         <div className="App">
           <Navbar />
           <Switch>
-            <Route  exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-
-            <Route path="*" component={Error}/>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
+            <Route path="/:profile_id" component={Profile}/>
+            <Route component={Error} />
           </Switch>
         </div>
       </BrowserRouter>
