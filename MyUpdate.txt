@@ -81,6 +81,13 @@ React Router
 *switch(it show first matching path component(/).....These ensure that only one component is rendered at a time)
 *"./:variable_name 
 
+ Router Hooks
+useParams()
+useHistory()==>goback(),replace(),push()
+useLocation()
+useRoutMatch()
+
+
 
 
 
