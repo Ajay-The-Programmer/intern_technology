@@ -8,6 +8,35 @@ import Error from "./components/Error";
 import Profile from "./components/Profile";
 
 
+
+class App extends React.Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <div className="App">
+          <Navbar />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
+            <Route path="/:profile_id" component={Profile}/>
+            <Route component={Error} />
+          </Switch>
+            <Home/>
+            <Home/>
+       
+        </div>
+      </BrowserRouter>
+    );
+  }
+}
+
+export default App;
+
+
+
+
+
+
 // interface DataApp {
 //   name: string;
 //   status: string;
@@ -24,23 +53,3 @@ import Profile from "./components/Profile";
 //     </div>
 //   );
 // }
-
-class App extends React.Component {
-  render() {
-    return (
-      <BrowserRouter>
-        <div className="App">
-          <Navbar />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/about" component={About} />
-            <Route path="/:profile_id" component={Profile}/>
-            <Route component={Error} />
-          </Switch>
-        </div>
-      </BrowserRouter>
-    );
-  }
-}
-
-export default App;

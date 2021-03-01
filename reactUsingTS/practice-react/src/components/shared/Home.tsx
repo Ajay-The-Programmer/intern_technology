@@ -2,22 +2,33 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 class Home extends React.Component {
-  state = {
-    users: [
-      { id: 10, name: "Ajay" },
-      { id: 11, name: "ankit" },
-      { id: 12, name: "shubham" },
-    ],
-  };
   render() {
-    const myname = this.state.users.map((item) => {
-      return (
-        <Link to={"/" + item.id}>
-          <h2>{item.name}</h2>
-        </Link>
-      );
-    });
-    return <div>{myname}</div>;
-  }
+    const style={
+      text:"center"
+    }
+    
+    return(
+    
+  <div className="d-inline-block row ">
+  <div className="col s6 m7">
+    <div className="card">
+      <div className="card-image">
+        <img src="images/sample-1.jpg"/>
+        <span className="card-title">Card Title</span>
+      </div>
+      <div className="card-content">
+        <p>I am a very simple card. I am good at containing small bits of information.
+        I am convenient because I require little markup to use effectively.</p>
+      </div>
+      <div className="card-action">
+        <a href="#">This is a link</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+    ) ; }
+
 }
 export default Home;

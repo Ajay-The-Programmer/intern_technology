@@ -82,7 +82,7 @@ React Router
 *"./:variable_name 
 
  Router Hooks
-useParams()
+useParams 
 useHistory()==>goback(),replace(),push()
 useLocation()
 useRoutMatch()

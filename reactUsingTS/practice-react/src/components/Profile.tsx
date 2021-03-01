@@ -1,8 +1,5 @@
-import { useLocation, useParams, useRouteMatch } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 
-interface Typess {
-  object: {};
-}
 
 const Profile = (props: any) => {
   const { profile_id }:any= useParams();
