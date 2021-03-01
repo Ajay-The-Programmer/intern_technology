@@ -1,6 +1,10 @@
-import { BrowserRouter, Route } from "react-router-dom";
-
-const About = () => {
-  return <h4>Welcome to About page</h4>;
+const About = (props: any) => {
+  
+  return(
+    <div>
+      <h1>I am about page</h1>
+      <button onClick={(()=>props.history.push("/"))}>Let Navigate</button>
+    </div>
+  );
 };
 export default About;

@@ -5,6 +5,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import Home from "./components/shared/Home";
 import About from "./components/shared/About";
 
+
 // interface DataApp {
 //   name: string;
 //   status: string;
