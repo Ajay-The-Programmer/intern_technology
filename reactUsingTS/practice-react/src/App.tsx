@@ -1,10 +1,10 @@
 import React from "react";
 import Navbar from "./router/Navbar";
 import "./App.css";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./components/shared/Home";
 import About from "./components/shared/About";
-
+import Error from "./components/Error"
 
 // interface DataApp {
 //   name: string;
@@ -29,9 +29,12 @@ class App extends React.Component {
       <BrowserRouter>
         <div className="App">
           <Navbar />
-          <Route exact path="/" component={Home} />
+          <Switch>
+            <Route  exact path="/" component={Home} />
+            <Route path="/about" component={About} />
 
-          <Route path="/about" component={About} />
+            <Route path="*" component={Error}/>
+          </Switch>
         </div>
       </BrowserRouter>
     );

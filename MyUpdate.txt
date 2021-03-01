@@ -73,6 +73,15 @@ https://reactjs.org/docs/getting-started.html
 
 
 
+Date :01-03-21
+React Router
+*Link
+*NavLink
+*withRouter
+*switch(it show first matching path component(/).....These ensure that only one component is rendered at a time)
+
+
+
 
 
 

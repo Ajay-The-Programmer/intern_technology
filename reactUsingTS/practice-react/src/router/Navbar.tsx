@@ -1,6 +1,16 @@
 import React from "react";
-import { NavLink,Link} from "react-router-dom";
-function Navbar() {
+import { NavLink,Link, withRouter} from "react-router-dom";
+
+
+
+
+
+function Navbar(props:any) {
+  // setTimeout(()=>{
+  //   props.history.push("/")
+  // },5000)
+ 
+  
   return (
     <div className="Navbar">
       <nav>
@@ -22,4 +32,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default withRouter(Navbar);
