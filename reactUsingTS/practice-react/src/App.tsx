@@ -7,8 +7,6 @@ import About from "./components/shared/About";
 import Error from "./components/Error";
 import Profile from "./components/Profile";
 
-
-
 class App extends React.Component {
   render() {
     return (
@@ -18,12 +16,10 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />
-            <Route path="/:profile_id" component={Profile}/>
+            <Route exact path="/:profile_id" component={Profile} />
             <Route component={Error} />
           </Switch>
-            <Home/>
-            <Home/>
-       
+         
         </div>
       </BrowserRouter>
     );
@@ -31,11 +27,6 @@ class App extends React.Component {
 }
 
 export default App;
-
-
-
-
-
 
 // interface DataApp {
 //   name: string;

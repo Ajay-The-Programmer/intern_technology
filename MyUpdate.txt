@@ -95,6 +95,7 @@ Date : 02-03-2021
 Higher Order Components(HOC)
 Array destructuring==> const array[first,second]=[10,20];
 useState Hooks
+*  useEffect(() => { console.log("hi") }, [no])             ==>is called conditional randering
 
 
 

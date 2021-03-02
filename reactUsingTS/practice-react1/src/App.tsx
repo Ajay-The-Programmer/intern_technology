@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
@@ -6,11 +6,11 @@ function App() {
   const [no, setNo] = useState(24);
   const increment = () => {
     setNo(no + 1)
-    setNo((prev)=>prev+1)
-    
-
+    setNo((prev) => prev + 1)
   }
-
+  useEffect(() => {
+     console.log("hi") 
+    }, [no])
   return (
     <div className="App">
       <h1>React Hook</h1>

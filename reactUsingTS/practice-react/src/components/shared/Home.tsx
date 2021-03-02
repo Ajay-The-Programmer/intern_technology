@@ -1,34 +1,14 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
 
 class Home extends React.Component {
+  
   render() {
-    const style={
-      text:"center"
-    }
-    
-    return(
-    
-  <div className="d-inline-block row ">
-  <div className="col s6 m7">
-    <div className="card">
-      <div className="card-image">
-        <img src="images/sample-1.jpg"/>
-        <span className="card-title">Card Title</span>
+  
+    return (
+      <div >
+        <h2>Home Page</h2>
       </div>
-      <div className="card-content">
-        <p>I am a very simple card. I am good at containing small bits of information.
-        I am convenient because I require little markup to use effectively.</p>
-      </div>
-      <div className="card-action">
-        <a href="#">This is a link</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-      
-    ) ; }
-
+    );
+  }
 }
 export default Home;
