@@ -1,4 +1,6 @@
 import './withPower.css'
+
+//Higher Order Component
 const WithPower = (Wcomponent: any) => {
   
   const newcomponent = () => {
