@@ -1,4 +1,5 @@
 import React from "react";
+import "./FormData.css"
 
 import "./App.css";
 import MyForm from "./MyForm"

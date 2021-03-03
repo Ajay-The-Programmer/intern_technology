@@ -1,0 +1,21 @@
+body {
+ 
+  background-color: gray;
+  text-align: justify;
+}
+.FormData{
+
+    display: block;
+
+}
+input{
+    padding: 7px;
+    margin-left: 90px;
+}
+button{
+    padding: 10px;
+    width: 100px;
+    margin-top: 20px;
+    background-color: greenyellow;
+}
+
