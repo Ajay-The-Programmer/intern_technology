@@ -1,6 +1,6 @@
 body {
  
-  background-color: gray;
+  
   text-align: justify;
 }
 .FormData{
@@ -12,10 +12,45 @@ input{
     padding: 7px;
     margin-left: 90px;
 }
-button{
-    padding: 10px;
-    width: 100px;
-    margin-top: 20px;
-    background-color: greenyellow;
+button {
+    padding: 15px;
+    width: 140px;
+    height:  40px;
+   margin-left: 100px;
+    background-color: gray;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    
 }
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 97%;
+    margin:20px;
 
+  }
+  
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  #customers th{
+    background-color: greenyellow;
+    text-align: center;
+  }
+  a{
+    text-decoration: none;
+    color: white;
+    text-underline-offset: none;
+  }
+  .update{
+
+    text-align: center;
+    background-color: rgb(106, 155, 32);
+    color: white;
+    height: 50px;
+    padding: 10px;
+  }
+  

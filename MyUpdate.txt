@@ -105,12 +105,45 @@ export interface AppConfig { API_LIVE: string}
 export const API: AppConfig = {}
 
 
+
+
+
+
+add
+update
+delete
+
+
+create form with text box(id,name,email,age),button
+after click button then post data on api
+and get it on DOM through get api
+can delete it 
+can update it
+
+
+name
+email
+mob no
+pass
+c pass
+
+for login
+email pass
+
+
+
+
+const requestOptions = {
+            method: 'POST', headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        };
+
+API
 http://192.168.1.77:4000/users/
-get data
+get_data==>for get data
+register==>for post data
+update-user
 
-
-
-
-
+<Route path={ '/' + user.setUsername + '/transaction/:id'} component={Resume} exact={true} />
 
 
