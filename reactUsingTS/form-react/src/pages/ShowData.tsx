@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import "../FormData.css"
+import "../ShowData.css"
 import { Services } from "../Services/Services"
 
 
@@ -9,7 +9,7 @@ import { Services } from "../Services/Services"
 
 
 
-const MyForm = () => {
+const ShowData = () => {
 
   const history=useHistory();
   const [data, setData] = useState([]);
@@ -21,11 +21,14 @@ const MyForm = () => {
   }, [])
 
 
-  // For Get Data
+  /////////////Get Data///////////////////////
+
   const getDataFromApi = () => {
-    Services.getData().then((res: any) => {
+    Services.getData().then((res:any) => {
       if (res) {
-        setData(res)
+        setData(res);
+      
+        
       
       } else {
         console.log('Result not found');
@@ -49,7 +52,7 @@ const deletData=(props:number)=>{
 
   return (
   <>
-   
+   <h2 className="Wapp">Welcome To CRUD Application</h2>
       <table id="customers">
         <thead>
           <th>Id</th>
@@ -60,8 +63,8 @@ const deletData=(props:number)=>{
 
         </thead>
         <tbody>
-          {data.map((item: any) =>
-            <tr>
+          {data.map((item: any,i:number) =>
+            <tr key={`${i}`}>
               <td>{item.id}</td>
               <td>{item.name}</td>
               <td>{item.email}</td>
@@ -69,7 +72,7 @@ const deletData=(props:number)=>{
              
               <td><button onClick={()=>history.push('/create')}> <strong>Create</strong> </button>
               <button onClick={()=>{ history.push(`/update/${item.id}`)}}> <strong>Update</strong> </button>
-              <button onClick={() => {deletData(item.id)}}> <strong>Delete</strong> </button></td>
+              <button className="deleteButton" onClick={() => {deletData(item.id)}}> <strong>Delete</strong> </button></td>
              
               
             </tr> )}
@@ -81,7 +84,7 @@ const deletData=(props:number)=>{
 
 
 }
-export default MyForm;
+export default ShowData;
 
 
 

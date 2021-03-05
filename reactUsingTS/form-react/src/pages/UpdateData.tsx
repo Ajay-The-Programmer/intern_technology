@@ -10,7 +10,6 @@ interface Props {
 
 class UpdateData extends React.Component<Props> {
 
-
     state: {
         id: null,
         name: string,
@@ -82,31 +81,31 @@ class UpdateData extends React.Component<Props> {
                     <div className="form-group row">
                         <label htmlFor="inputEmail3" className="col-sm-2 col-form-label" >Name</label>
                         <div className="col-sm-5">
-                            <input type="text" className="form-control" id="inputName3" name="name" placeholder="Name" onChange={this.myChangeHandler} />
+                            <input type="text" required className="form-control" id="inputName3" name="name" placeholder="Name" onChange={this.myChangeHandler} />
                         </div>
                     </div>
                     <div className="form-group row">
                         <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Email</label>
                         <div className="col-sm-5">
-                            <input type="email" className="form-control" id="inputEmail3" name="email" placeholder="Email" onChange={this.myChangeHandler} />
+                            <input type="email" required className="form-control" id="inputEmail3" name="email" placeholder="Email" onChange={this.myChangeHandler} />
                         </div>
                     </div>
                     <div className="form-group row">
                         <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Mobile_Number</label>
                         <div className="col-sm-5">
-                            <input type="text" className="form-control" id="inputMobile_Number3" name="mobile_no" placeholder="Mobile_Number" onChange={this.myChangeHandler} />
+                            <input type="text" required className="form-control" id="inputMobile_Number3" name="mobile_no" placeholder="Mobile_Number" onChange={this.myChangeHandler} />
                         </div>
                     </div>
                     <div className="form-group row">
                         <label htmlFor="inputPassword3" className="col-sm-2 col-form-label">Password</label>
                         <div className="col-sm-5">
-                            <input type="password" className="form-control" id="inputPassword3" name="password" placeholder="Password" onChange={this.myChangeHandler} />
+                            <input type="password" required className="form-control" id="inputPassword3" name="password" placeholder="Password" onChange={this.myChangeHandler} />
                         </div>
                     </div>
                     <div className="form-group row">
                         <label htmlFor="inputPassword3" className="col-sm-2 col-form-label">Confirm_Password</label>
                         <div className="col-sm-5">
-                            <input type="password" className="form-control" id="Confirm_Password3 " placeholder="Confirm_Password" onChange={this.myChangeHandler} />
+                            <input type="password" required className="form-control" id="Confirm_Password3 " placeholder="Confirm_Password" onChange={this.myChangeHandler} />
                         </div>
                     </div>
 
