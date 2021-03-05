@@ -143,7 +143,11 @@ http://192.168.1.77:4000/users/
 get_data==>for get data
 register==>for post data
 update-user
+get_user 
+delete-user
 
 <Route path={ '/' + user.setUsername + '/transaction/:id'} component={Resume} exact={true} />
+
+////////////////////////////////////////////////////////////////////////////////////////
 
 

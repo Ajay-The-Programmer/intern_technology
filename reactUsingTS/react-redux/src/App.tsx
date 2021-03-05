@@ -1,11 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import './App.css';
+import { connect } from 'react-redux'
+
+
+const myStateToProps = (state: any) => {
+  return {
+    myname: state.name
+  }
+}
+
+
+function App(props: any) {
+  console.log(props);
+
   return (
     <div className="App">
-    <h2>Welcome to React Redux application</h2>
+      <h1>Welcome</h1>
     </div>
   );
 }

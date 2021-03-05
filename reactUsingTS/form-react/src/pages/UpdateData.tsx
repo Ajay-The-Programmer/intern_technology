@@ -18,9 +18,8 @@ class UpdateData extends React.Component<Props> {
         password: any,
         confirm_password: any,
     };
-    
-    constructor(props: any) {
 
+    constructor(props: any) {
         super(props);
         this.state = {
             id: null,
@@ -31,18 +30,20 @@ class UpdateData extends React.Component<Props> {
             confirm_password: null,
         };
 
+      
 
 
     }
+    
 
     myChangeHandler = (event: { target: { value: any; name: string } }) => {
 
         const id = this.props.match.params.id;
 
         this.setState({
-            id:id,
+            id: id,
             [event.target.name]: event.target.value,
-            
+
         });
     };
 
@@ -64,7 +65,7 @@ class UpdateData extends React.Component<Props> {
             }
         }).catch((error: any) => {
             console.log(error);
-        });  
+        });
 
         console.log("submit Data");
     }

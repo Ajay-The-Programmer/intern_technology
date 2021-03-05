@@ -3,18 +3,13 @@ import { useHistory } from "react-router-dom";
 import "../ShowData.css"
 import { Services } from "../Services/Services"
 
-
-
-
-
-
-
 const ShowData = () => {
 
-  const history=useHistory();
+  const history = useHistory();
   const [data, setData] = useState([]);
- 
-  
+
+
+
 
   useEffect(() => {
     getDataFromApi();
@@ -24,12 +19,10 @@ const ShowData = () => {
   /////////////Get Data///////////////////////
 
   const getDataFromApi = () => {
-    Services.getData().then((res:any) => {
+    Services.getData().then((res: any) => {
       if (res) {
         setData(res);
-      
-        
-      
+
       } else {
         console.log('Result not found');
       }
@@ -38,21 +31,36 @@ const ShowData = () => {
     });
   };
 
-   
-
-//////////// Delete /////////////////
-  
-const deletData=(props:number)=>{
-  console.log("delete "+props);
 
 
-}
-/////////////////////////////////////
+  //////////// Delete /////////////////
 
+  const deletData = (props: number) => {
+
+    console.log("delete " + props);
+    Services.deleteUser(props).then((res: any) => {
+      if (res) {
+        console.log(res);
+        // success(props)
+      }
+      else {
+        console.log("Result Not Found");  
+
+      }
+    }).catch((error: any) => {
+      console.log(error);
+
+    })
+
+
+  }
+  /////////////////////////////////////
+ 
 
   return (
-  <>
-   <h2 className="Wapp">Welcome To CRUD Application</h2>
+    <>
+      <h2 className="Wapp">Welcome To CRUD Application</h2>
+      <button className="createButton" onClick={() => history.push('/create')}> <strong>Create</strong> </button>
       <table id="customers">
         <thead>
           <th>Id</th>
@@ -63,22 +71,23 @@ const deletData=(props:number)=>{
 
         </thead>
         <tbody>
-          {data.map((item: any,i:number) =>
+          {data.map((item: any, i: number) =>
             <tr key={`${i}`}>
               <td>{item.id}</td>
               <td>{item.name}</td>
               <td>{item.email}</td>
               <td>{item.mobile_no}</td>
-             
-              <td><button onClick={()=>history.push('/create')}> <strong>Create</strong> </button>
-              <button onClick={()=>{ history.push(`/update/${item.id}`)}}> <strong>Update</strong> </button>
-              <button className="deleteButton" onClick={() => {deletData(item.id)}}> <strong>Delete</strong> </button></td>
-             
-              
-            </tr> )}
-       
+
+              <td>
+                <button onClick={() => { history.push(`/update/${item.id}`) }}> <strong>Update</strong> </button>
+                <button className="deleteButton" onClick={() => { deletData(item.id) }}> <strong>Delete</strong> </button></td>
+
+
+            </tr>)}
+
         </tbody>
       </table>
+   
     </>
   );
 
@@ -88,6 +97,5 @@ export default ShowData;
 
 
 
-  
 
- 
+

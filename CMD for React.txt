@@ -1,0 +1,7 @@
+1. CMD for creact react app with typescript :- npx creact-react-app my-app --template typescript	
+
+*Redux and React-Redux
+1.npm install --save redux @types/redux
+2.npm install --save react-redux @types/react-redux
+
+*Reducer

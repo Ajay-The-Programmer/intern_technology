@@ -42,7 +42,7 @@ class CollectFormData extends React.Component{
 
         event.preventDefault();
      
-       console.log(this.state);
+        console.log(this.state);
 
        
        
