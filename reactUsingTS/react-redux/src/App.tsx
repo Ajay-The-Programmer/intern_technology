@@ -14,7 +14,7 @@ function App(props: any) {
     <div className="App">
       <h1>Welcome</h1>
       <h2>My Name is : {props.myname}</h2>
-      <button onClick={() => { props.changeName("devkar") }}>Change It</button>
+      <button onClick={() => { props.changeName()}}>Change It</button>
     </div>
   );
 }
@@ -26,7 +26,7 @@ const myStateToProps = (state: any) => {
 const mapDispatchToProps = (dispatch: any) => {
   return {
     changeName: (name: string) => {
-      dispatch(myActionCreationName(name))
+      dispatch(myActionCreationName())
 
     }
   }
