@@ -3,5 +3,21 @@
 *Redux and React-Redux
 1.npm install --save redux @types/redux
 2.npm install --save react-redux @types/react-redux
+*Redux devtool setup
+declare global {
+  interface Window {
+    __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
+  }
+}
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;  
+ const store = createStore(rootReducer, composeEnhancers(
+     applyMiddleware(thunk)
+ ));
 
 *Reducer
+
+
+
+
+
