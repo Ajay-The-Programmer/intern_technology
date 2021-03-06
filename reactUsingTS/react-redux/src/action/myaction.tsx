@@ -9,13 +9,13 @@
 // }
 export const myActionCreationName = () => {
 
-    return (dispatch: any) => {
+    return async (dispatch: any) => {
 
-        fetch("https://jsonplaceholder.typicode.com/users")
-            .then(res => res.json())
-            .then(res2 => {
-                dispatch({ type: 'CHANGE_NAME', payload: res2[0].name })
-            })
+        const data = await fetch("https://jsonplaceholder.typicode.com/users")
+        const res2 = await data.json()
+        dispatch({ type: 'CHANGE_NAME', payload: res2[2].name })
+
+
     }
 
 }
