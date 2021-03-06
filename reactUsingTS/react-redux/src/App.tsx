@@ -2,6 +2,7 @@ import React from 'react';
 
 import './App.css';
 import { connect } from 'react-redux'
+import { myActionCreationName } from './action/myaction';
 
 
 
@@ -25,7 +26,8 @@ const myStateToProps = (state: any) => {
 const mapDispatchToProps = (dispatch: any) => {
   return {
     changeName: (name: string) => {
-      dispatch({ type: 'CHANGE_NAME', payload: name })
+      dispatch(myActionCreationName(name))
+
     }
   }
 }
