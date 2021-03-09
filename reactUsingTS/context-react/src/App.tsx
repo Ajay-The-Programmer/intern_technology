@@ -12,10 +12,10 @@ const Coder3 = () => {
 
   return (
 
-    <>
+    <React.Fragment>
       <h1>My name is :{name}</h1>
       <h2>My age is : {age}</h2>
-    </>
+    </React.Fragment>
 
   )
 
