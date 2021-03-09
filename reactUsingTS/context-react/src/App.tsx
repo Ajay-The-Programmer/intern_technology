@@ -1,55 +1,34 @@
-import React, { useContext } from 'react';
+import React, { useReducer } from 'react';
 import './App.css';
-
-const NameContext = React.createContext(' ajay')
-const AgeContext = React.createContext(25)
-
-const Coder3 = () => {
-
-  const name = useContext(NameContext)
-  const age = useContext(AgeContext)
+import { Coder } from './components/Coder';
+import { NameContext, AgeContext } from './components/CreateContext';
+import { iState, Reducer } from './reducers/Reducer';
 
 
-  return (
-
-    <React.Fragment>
-      <h1>My name is :{name}</h1>
-      <h2>My age is : {age}</h2>
-    </React.Fragment>
-
-  )
-
-}
-
-const Coder2 = () => {
-  return (
-    <div><Coder3 /></div>
-  )
-}
-const Coder = () => {
-  return (
-    <div><Coder2 /></div>
-  )
-}
 
 function App() {
 
+  const [data, dispatch] = useReducer(Reducer, iState)
+  const getName = async () => {
 
+    const data = await fetch('https://jsonplaceholder.typicode.com/users')
+    const res = await data.json()
+    dispatch({ type: 'CHANGE_NAME', payload: res[0].name })
+
+  }
   return (
-    <NameContext.Provider value={"Ajay"}>
-      <AgeContext.Provider value={24}>
-        <div className="App">
 
-          <Coder />
 
-        </div>
-      </AgeContext.Provider >
-    </NameContext.Provider >
+    <div className="App">
+      <h2>my name is : {data.name}</h2>
+      <h2>i wish to {data.wish[0]}</h2>
+
+      <button onClick={() => getName()}>CHANGE</button>
+    </div>
+
   );
 }
 
 export default App;
 
 
-// A/C 3417849440
-// IFSC CODE :CBIN0280712

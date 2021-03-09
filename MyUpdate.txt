@@ -148,8 +148,17 @@ delete-user
 
 <Route path={ '/' + user.setUsername + '/transaction/:id'} component={Resume} exact={true} />
 
-////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
 
 Date : 09-03-21
 
+
 1.<React.Fragment> or you can write like <>..</> it is also called react fragment.
+2.createContext
+3.context_name.Provider
+4.context_name.Consumer
+5.const name=useContext(context_name)
+6.nested_context
+7.const [data,dispatch]=useReducer(reducer_name,state_name(ex..istate))
+
+
