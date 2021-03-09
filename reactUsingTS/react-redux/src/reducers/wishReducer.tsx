@@ -3,9 +3,9 @@
 //     name: "ajay",
 //     wishesh:["eat", "code"]
 // }
-const wishReducer = (state=[null], action:any) => {
-    if (action.type==="CHANGE_WISH") {
-        return action.payload
+const wishReducer = (state=[''], action:any) => {
+    if (action.type==="ADD_WISH") {
+        return [action.payload]
     }
     
     return state;

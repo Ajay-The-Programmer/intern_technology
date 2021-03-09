@@ -1,10 +1,13 @@
 
 
-const nameReducer = (state =null, action:any) => {
-    if (action.type==="CHANGE_NAME") {
-        return action.payload
+const nameReducer = (state = ' ', action: any) => {
+    switch (action.type) {
+        case "CHANGE_NAME": {
+            return action.payload
+        }
+        default:
+            return state;
     }
-    
-    return state;
+
 }
 export default nameReducer;

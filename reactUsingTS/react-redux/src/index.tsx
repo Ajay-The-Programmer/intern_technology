@@ -21,12 +21,12 @@ const masterReducer = combineReducers({
   name: nameReducer,
   wish: wishReducer,
 })
-const store = createStore(masterReducer,{name:"ajay", wish:["eat","sleep"]}, composeEnhancers(
+const store = createStore(masterReducer,{name:'ajay', wish:['eat','sleep']}, composeEnhancers(
   applyMiddleware(thunk)
 ))
 
 
-ReactDOM.render(
+ReactDOM.render(  
   <Provider store={store}>
     <App />
   </Provider>,

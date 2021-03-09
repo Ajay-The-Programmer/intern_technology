@@ -16,6 +16,6 @@ export const myActionCreationName = () => {
 };
 // export const addWish = () => {
 //     return {
-//         type: "CHANGE_WISH",payload:,
+//         type: "ADD_WISH",payload:'code',
 //     };
 // };

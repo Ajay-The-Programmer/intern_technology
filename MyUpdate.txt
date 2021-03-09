@@ -150,4 +150,6 @@ delete-user
 
 ////////////////////////////////////////////////////////////////////////////////////////
 
-	
+Date : 09-03-21
+
+1.<React.Fragment> or you can write like <>..</> it is also called react fragment.
