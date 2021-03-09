@@ -1,20 +1,40 @@
 import React from 'react';
 import './App.css';
 
-const myContext = React.createContext({ name: ' ajay', age: 25 })
+const NameContext = React.createContext(' ajay')
+const AgeContext = React.createContext(25)
 
-class Coder3 extends React.Component {
+const Coder3 = () => {
 
-  static contextType = myContext;
-  render() {
 
-    return (
-      < React.Fragment>
-        <h3>my name :{this.context.name}</h3>
-        <h3>my age :{this.context.age}</h3>
-      </React.Fragment>
-    )
-  }
+
+  return (
+
+    <NameContext.Consumer>{
+      (name) => {
+
+        return (
+          <AgeContext.Consumer>
+            {
+              (age) => {
+                return (
+                  <>
+                    <h1>my name is :{name}</h1>
+                    <h2>My age is : {age}</h2>
+                  </>
+                )
+              }
+
+            }
+
+          </AgeContext.Consumer>)
+
+      }}
+
+    </NameContext.Consumer >
+
+  )
+
 }
 
 const Coder2 = () => {
@@ -30,15 +50,22 @@ const Coder = () => {
 
 function App() {
 
+
   return (
-    <div className="App">
+    <NameContext.Provider value={"Ajay"}>
+      <AgeContext.Provider value={24}>
+        <div className="App">
 
-      <myContext.Provider value={{ name: "Ajay", age: 24 }}>
-        <Coder />
-      </myContext.Provider>
+          <Coder />
 
-    </div>
+        </div>
+      </AgeContext.Provider >
+    </NameContext.Provider >
   );
 }
 
 export default App;
+
+
+// A/C 3417849440
+// IFSC CODE :CBIN0280712
