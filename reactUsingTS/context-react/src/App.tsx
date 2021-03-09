@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './App.css';
 
 const NameContext = React.createContext(' ajay')
@@ -6,32 +6,16 @@ const AgeContext = React.createContext(25)
 
 const Coder3 = () => {
 
+  const name = useContext(NameContext)
+  const age = useContext(AgeContext)
 
 
   return (
 
-    <NameContext.Consumer>{
-      (name) => {
-
-        return (
-          <AgeContext.Consumer>
-            {
-              (age) => {
-                return (
-                  <>
-                    <h1>my name is :{name}</h1>
-                    <h2>My age is : {age}</h2>
-                  </>
-                )
-              }
-
-            }
-
-          </AgeContext.Consumer>)
-
-      }}
-
-    </NameContext.Consumer >
+    <>
+      <h1>My name is :{name}</h1>
+      <h2>My age is : {age}</h2>
+    </>
 
   )
 
