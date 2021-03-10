@@ -1,10 +1,8 @@
-import React, { useReducer } from 'react';
+import React, { createContext, Dispatch, useReducer } from 'react';
 import './App.css';
 import { Coder } from './components/Coder';
 import { NameContext, AgeContext } from './components/CreateContext';
 import { iState, Reducer } from './reducers/Reducer';
-
-
 
 function App() {
 
@@ -16,15 +14,16 @@ function App() {
     dispatch({ type: 'CHANGE_NAME', payload: res[0].name })
 
   }
+  
+  // const [data, dispatch] = useReducer(Reducer, iState)
   return (
-
-
-    <div className="App">
-      <h2>my name is : {data.name}</h2>
-      <h2>i wish to {data.wish[0]}</h2>
-
-      <button onClick={() => getName()}>CHANGE</button>
-    </div>
+    <NameContext.Provider value={{name:data.name , dispatchName:dispatch }}>
+      <div className="App">
+      
+       <Coder/>
+       <button onClick={()=>getName()}> Click </button>
+      </div>
+    </NameContext.Provider>
 
   );
 }

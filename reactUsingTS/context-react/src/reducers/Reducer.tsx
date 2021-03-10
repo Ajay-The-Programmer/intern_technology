@@ -13,7 +13,7 @@ export const Reducer = (state: any, action: any) => {
         case 'CHANGE_NAME':
             return {
                 ...state,
-                name: action.payload
+                name:action.payload
             }
 
 

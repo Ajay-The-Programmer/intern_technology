@@ -1,20 +1,18 @@
 import React, { useContext } from 'react';
-import { AgeContext, NameContext } from './CreateContext';
+import { AgeContext,NameContext} from './CreateContext';
 
-export const Coder3 = () => {
+export const Coder3 = (props:any) => {
 
-    const name = useContext(NameContext)
-    const age = useContext(AgeContext)
-  
-  
-    return (
-  
-      <React.Fragment>
-   
-        <h1>My name is :{name}</h1>
-        <h2>My age is : {age}</h2>
-      </React.Fragment>
-  
-    )
-  
-  }
+  const coder3 = useContext(NameContext)
+  // const age = useContext(AgeContext)
+
+  return (
+
+    <React.Fragment>
+      <h3>i am coder3</h3>
+      <h2>{coder3.name}</h2>
+    </React.Fragment>
+
+  )
+
+}

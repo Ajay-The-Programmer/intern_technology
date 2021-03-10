@@ -2,14 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Hello from './App';
+import App2 from './App2';
 // import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Hello name="Aspire" enthusiasmLevel={2}/>
+    {/* <Hello name="Aspire"  default_exclamation={2}/> */}
+    <App2/>
   </React.StrictMode>,
   document.getElementById('root') as HTMLElement
-);
+);  
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

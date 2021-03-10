@@ -3,28 +3,30 @@ import "./Hello.css";
 
 export interface Props {
   name: string;
-  enthusiasmLevel?: number;
+  default_exclamation?: number;
 }
 interface State {
-  currentEnthusiasm: number;
+  current_exclamation_mark: number;
 }
 class Hello extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { currentEnthusiasm: props.enthusiasmLevel || 1 };
+    this.state = { 
+      current_exclamation_mark: props.default_exclamation || 1
+     };
   }
-  onIncrement = () => this.updateEnthusiasm(this.state.currentEnthusiasm + 1);
-  onDecrement = () => this.updateEnthusiasm(this.state.currentEnthusiasm - 1);
+  onIncrement = () => this.updateExclamation(this.state.current_exclamation_mark + 1);
+  onDecrement = () => this.updateExclamation(this.state.current_exclamation_mark - 1);
 
   render() {
-    const { name, enthusiasmLevel = 1 } = this.props;
-    if (enthusiasmLevel <= 0) {
+    const { name, default_exclamation = 1 } = this.props;
+    if (default_exclamation <= 0) {
       throw new Error("You could be a little more enthusiastic.");
     }
     return (
       <div className="hello">
         <div className="greeting">
-          Hello {name + getExclamationMarks(this.state.currentEnthusiasm)}
+          Hello {name + getExclamationMarks(this.state.current_exclamation_mark)}
         </div>
         <div className="button_collection">
 
@@ -36,8 +38,8 @@ class Hello extends React.Component<Props, State> {
      
     );
   }
-  updateEnthusiasm(currentEnthusiasm: number) {
-    this.setState({ currentEnthusiasm });
+  updateExclamation(current_exclamation_mark: number) {
+    this.setState({ current_exclamation_mark });
   }
 }
 
