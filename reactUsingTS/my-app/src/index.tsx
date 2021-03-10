@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Hello from './App';
-import App2 from './App2';
+import AppFunction from './AppFunction';
 // import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <Hello name="Aspire"  default_exclamation={2}/> */}
-    <App2/>
+    <AppFunction/>
   </React.StrictMode>,
   document.getElementById('root') as HTMLElement
 );  
