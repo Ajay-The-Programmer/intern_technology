@@ -1,26 +1,38 @@
 
-import React  from 'react'
+import React from 'react'
 
-class App2 extends React.Component{
+class App2 extends React.Component {
     myref = React.createRef<HTMLHeadingElement>();
-    componentDidMount=() =>{
+    myInput = React.createRef<HTMLInputElement>();
 
-        console.log(this.myref.current?.innerText);
+    // componentDidMount = () => {
+
+    //     // console.log(this.myref.current?.innerText);
+    //     console.log(this.myInput.current?.innerText);
+
+
+    // }
+    getValue = () => {
+        console.log(this.myInput.current?.value);
+
 
     }
-    
-    render(){
-        
-        return(
+
+    render() {
+
+        return (
 
             <div>
-                <h3  ref={ this.myref}>
-               Hello
+                <h3 ref={this.myref}>
+                    Hello
 
                 </h3>
-                </div>
+                <input type="text" ref={this.myInput} />
+                <button onClick={() => this.getValue()}>Get Value</button>
+            </div>
         )
     }
+
 
 }
 export default App2;
