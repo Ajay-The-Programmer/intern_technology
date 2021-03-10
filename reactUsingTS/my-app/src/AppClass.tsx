@@ -11,7 +11,7 @@ class AppClass extends React.Component {
         this.myInput = React.createRef<HTMLInputElement>();
 
     }
-   
+      
 
     getValue = () => {
         console.log(this.myInput.current?.value);
