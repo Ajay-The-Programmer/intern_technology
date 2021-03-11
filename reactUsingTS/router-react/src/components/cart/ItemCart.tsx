@@ -5,7 +5,7 @@ const About = () => {
   const history = useHistory();
   return (
     <div>
-      <h1>I am about page</h1>
+      <h4> Cart Item</h4>
       <button onClick={() => history.push("/")}>Let Navigate</button>
     </div>
   );

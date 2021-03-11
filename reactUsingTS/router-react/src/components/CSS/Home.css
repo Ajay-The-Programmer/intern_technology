@@ -1,0 +1,35 @@
+
+body{
+}
+.container{
+
+    background-color: black;
+    width: 100%;
+    height: auto;
+    margin-top: 10%;
+    font-size: large;
+    display: -webkit-inline-box;
+    
+    
+}
+#add_to_cart{
+
+    float: right;
+    background-color: black;
+   
+}
+#details{
+
+    font-size: small;
+  color: black;
+  border-bottom:1px solid black ;
+  text-decoration: none;
+    
+}
+.card{
+    text-align: left;
+    margin: 30px;
+    position: relative;
+    top:5px;
+   
+}

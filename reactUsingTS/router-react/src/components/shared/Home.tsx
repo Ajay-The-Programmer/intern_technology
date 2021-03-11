@@ -1,29 +1,66 @@
 import React from 'react'
 import Item1 from '../../image/item1.jpg'
-class Home extends React.Component {
+import '../CSS/Home.css'
+import { connect, useSelector } from 'react-redux'
+import { addToCart } from '../actionCreater/CartActionCreater';
+// import {initState} from "../../cartReducer/cartReducer"
 
+class Home extends React.Component<any>{
+  handleClick(id: any) {
+    console.log(id);
+    this.props.addToCart(id);
+
+  }
   render() {
 
-    return (
-      <div >
-        <div className="row">
-          <div className="col s7 m7">
-            <div className="card">
-              <div className="card-image">
-                <img src={Item1}/>
-                <span className="card-title">Card Title</span>
-              </div>
-              <div className="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                   I am convenient because I require little markup to use effectively.</p>
-              </div>
-              <div className="card-action">
-                <a href="#">This is a link</a>
-              </div>
-            </div>
+
+    let itemList = this.props.items.map((item: any) => {
+      return (
+
+        <div className="card" style={{ width: '14rem' }} key={item.id}>
+          <img className="card-img-top" src={item.img} alt="Card image cap" />
+          <div className="card-body">
+            <h5 className="card-title">{item.title}</h5>
+            <p className="card-text"> <strong> ${item.price} </strong></p>
+            <a href='#' id="details">DETAILS</a>
+            <a href="#" className="btn btn-primary" id="add_to_cart" onClick={() => { this.handleClick(item.id) }}>Add to Cart</a>
           </div>
-        </div>      </div>
+        </div>
+
+
+      )
+    });
+
+    return (
+      <>
+
+        <div className="container">
+
+          {itemList}
+
+        </div>
+      </>
     );
   }
+
 }
-export default Home;
+
+
+const mapStateToProps = (state: any) => {
+
+
+  return {
+
+    items: state.items
+
+  }
+}
+const mapDispatchToProps = (dispatch: any) => {
+
+  return {
+    addToCart: (id: number) => { dispatch(addToCart(id)) }
+  }
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

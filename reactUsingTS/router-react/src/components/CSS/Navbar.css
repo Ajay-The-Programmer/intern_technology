@@ -1,0 +1,18 @@
+#navbar{
+
+    
+    background-color: rgb(64, 185, 84);
+    text-decoration: none;
+
+
+}
+#home{
+    color: white;
+    font-size: 23px;
+}
+.center{
+    text-align: center;
+    margin-left: 2%;
+    font-size: 27px;
+    font-family: cursive;
+}
