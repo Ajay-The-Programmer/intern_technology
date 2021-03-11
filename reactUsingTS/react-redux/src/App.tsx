@@ -8,6 +8,7 @@ import { DefaultSerializer } from 'node:v8';
 
 
 function App() {
+
   // props.myWish.push(props.myWish);
   // console.log(props);
   // console.log(props.myWish);
@@ -16,21 +17,24 @@ function App() {
   const myname = useSelector<any>(state => {
     return state.name
   })
-  // const wish = useSelector<any>(state => {
-  //   return state.wish
-  // })
+   
+  const wish:any= useSelector<any>((state:any)=> {
+   
+    return state.wish
+    
+  })
 
-  // const myWish =wish.map((item: any) => {
-  //   return <h2 key={Math.random()}>{item}</h2>
-  // })
+  const myWish = wish.map((item: any) => {
+    return <h2 key={Math.random()}>{item}</h2>
+  })
 
   return (
     <div className="App">
       <h1>Welcome</h1>
       <h2>My Name is : <strong>  {myname} </strong></h2>
-      {/* <h3>I Like is : {myWish}</h3> */}
-      {/* <button onClick={() => { props.changeName() }}>Change Name</button>
-      <button onClick={() => { props.addWish(['codding', 'tracking']) }}>Change Wish</button> */}
+      <h3>I Like is : {myWish}</h3>
+      {/* <button onClick={dispatch(changeName())}>Change Name</button> */}
+     {/*  <button onClick={() => { props.addWish(['codding', 'tracking']) }}>Change Wish</button> */}
     </div>
   );
 }
@@ -44,20 +48,17 @@ function App() {
 
 
 // }
-const mapDispatchToProps = (dispatch: any) => {
-  return {
-    changeName: () => {
-      dispatch(myActionCreationName())
-    },
-    addWish: (wish: []) => { dispatch({ type: "ADD_WISH", payload: wish }) }
+// const mapDispatchToProps = (dispatch: any) => {
+//   return {
+//     changeName: () => {
+//       dispatch(myActionCreationName())
+//     },
+//     addWish: (wish: []) => { dispatch({ type: "ADD_WISH", payload: wish }) }
 
 
-  }
-}
+//   }
+// }
 
 
 export default App;
-function addWish(arg0: string[]): any {
-  throw new Error('Function not implemented.');
-}
 
