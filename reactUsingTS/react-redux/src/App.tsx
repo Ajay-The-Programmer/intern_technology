@@ -14,28 +14,34 @@ function App() {
   // console.log(props.myWish);
   // console.log(props.myname);
   const dispatch = useDispatch();
-  const myname = useSelector<any>(state => {
-    return state.name
+  const data:any = useSelector<any>(state => {
+    return state
   })
    
-  const wish:any= useSelector<any>((state:any)=> {
+  // const wish:any= useSelector<any>((state:any)=> {
    
-    return state.wish
+  //   return state.wish
     
-  })
+  // })
 
-  const myWish = wish.map((item: any) => {
+  const myWish = data.wish.map((item: any) => {
+    console.log(data.name);
+    
+    console.log(item);
+    
     return <h2 key={Math.random()}>{item}</h2>
   })
 
   return (
+    <>
     <div className="App">
       <h1>Welcome</h1>
-      <h2>My Name is : <strong>  {myname} </strong></h2>
+      <h2>My Name is : <strong>  {data.name} </strong></h2>
       <h3>I Like is : {myWish}</h3>
-      {/* <button onClick={dispatch(changeName())}>Change Name</button> */}
-     {/*  <button onClick={() => { props.addWish(['codding', 'tracking']) }}>Change Wish</button> */}
+      <button onClick={()=>dispatch(myActionCreationName())}>Change Name</button>
+      <button onClick={() => { dispatch({ type: "ADD_WISH", payload:["Codder","Programmer"]}) }}>Change Wish</button>
     </div>
+    </>
   );
 }
   // const myStateToProps = (state: { name: any; wish: any; }) => {
@@ -61,4 +67,8 @@ function App() {
 
 
 export default App;
+
+function addWish(arg0: string[]): any {
+  throw new Error('Function not implemented.');
+}
 
