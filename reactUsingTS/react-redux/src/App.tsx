@@ -2,7 +2,7 @@ import React from 'react';
 
 import './App.css';
 import { connect, DefaultRootState, useDispatch, useSelector } from 'react-redux'
-import { myActionCreationName } from './action/myaction';
+import { addWish, myActionCreationName } from './action/myaction';
 import { DefaultSerializer } from 'node:v8';
 
 
@@ -39,12 +39,12 @@ function App() {
       <h2>My Name is : <strong>  {data.name} </strong></h2>
       <h3>I Like is : {myWish}</h3>
       <button onClick={()=>dispatch(myActionCreationName())}>Change Name</button>
-      <button onClick={() => { dispatch({ type: "ADD_WISH", payload:["Codder","Programmer"]}) }}>Change Wish</button>
+      <button onClick={() =>dispatch(addWish())}>Change Wish</button>
     </div>
     </>
   );
 }
-  // const myStateToProps = (state: { name: any; wish: any; }) => {
+  // const mapStateToProps = (state: { name: any; wish: any; }) => {
 
   // return {
   //   myname: state.name,
@@ -68,7 +68,5 @@ function App() {
 
 export default App;
 
-function addWish(arg0: string[]): any {
-  throw new Error('Function not implemented.');
-}
+
 
