@@ -3,16 +3,22 @@
     
     background-color: rgb(64, 185, 84);
     text-decoration: none;
+    color: white;
+    
 
 
 }
 #home{
     color: white;
-    font-size: 23px;
+    font-size: 21px;
+
 }
 .center{
-    text-align: center;
-    margin-left: 2%;
-    font-size: 27px;
-    font-family: cursive;
+    /* text-align: center; */
+    
+    margin-left: 129px;
+    font-size: 28px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: seashell;
+    text-decoration: none;
 }

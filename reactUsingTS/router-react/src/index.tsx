@@ -7,6 +7,7 @@ import { compose } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import cartReducer from './cartReducer/cartReducer';
+import { Footer } from './components/Footer';
 
 declare global {
   interface Window {
@@ -14,14 +15,16 @@ declare global {
   }
 }
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 const store = createStore(cartReducer, composeEnhancers(applyMiddleware(thunk)))
 
 
 
 ReactDOM.render(
-  <Provider store={store}>  
+  <Provider store={store}>
 
     <App />
+    <Footer />
 
   </Provider>,
   document.getElementById('root')

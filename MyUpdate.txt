@@ -167,3 +167,30 @@ Date :10-03-21
 1.Ref()...    myref = React.createRef<HTMLHeadingElement>();
 
 
+
+
+
+https://react.diamondrx.com/checkout
+
+https://react.diamondrx.com/api/authnet?cc_number=6011000000000012&expiry_date=2038-12&amount=20
+
+
+
+DimondRX 13-03-21
+
+create form
+
+input textbox for credit cart information and after submit form then call post api 
+https://www.npmjs.com/package/react-credit-cards
+
+
+
+
+https://react.diamondrx.com/checkout
+
+https://react.diamondrx.com/api/authnet?cc_number=6011000000000012&expiry_date=2038-12&amount=20
+
+
+
+// $dotenv = Dotenv\Dotenv::create(__DIR__.'/../');
+

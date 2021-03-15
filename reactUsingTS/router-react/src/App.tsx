@@ -3,9 +3,10 @@ import Navbar from "./router/Navbar";
 import "./App.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./components/shared/Home";
-import About from "./components/cart/ItemCart";
+
 import Error from "./components/Error";
-import Profile from "./components/Profile";
+
+import Cart from "./components/cart/Cart";
 
 class App extends React.Component {
   render() {
@@ -15,11 +16,11 @@ class App extends React.Component {
           <Navbar />
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/cart" component={About} />
-            <Route exact path="/:profile_id" component={Profile} />
+            <Route exact path="/" component={Navbar} />
+            <Route exact path="/cart" component={Cart} />
             <Route component={Error} />
           </Switch>
-         
+
         </div>
       </BrowserRouter>
     );

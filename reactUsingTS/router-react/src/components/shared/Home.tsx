@@ -1,14 +1,17 @@
 import React from 'react'
-import Item1 from '../../image/item1.jpg'
+
 import '../CSS/Home.css'
-import { connect, useSelector } from 'react-redux'
+import { connect } from 'react-redux'
 import { addToCart } from '../actionCreater/CartActionCreater';
-// import {initState} from "../../cartReducer/cartReducer"
+
+
+
 
 class Home extends React.Component<any>{
-  handleClick(id: any) {
-    console.log(id);
+
+  handleClick = (id: number) => {
     this.props.addToCart(id);
+
 
   }
   render() {
@@ -17,30 +20,37 @@ class Home extends React.Component<any>{
     let itemList = this.props.items.map((item: any) => {
       return (
 
-        <div className="card" style={{ width: '14rem' }} key={item.id}>
-          <img className="card-img-top" src={item.img} alt="Card image cap" />
-          <div className="card-body">
-            <h5 className="card-title">{item.title}</h5>
-            <p className="card-text"> <strong> ${item.price} </strong></p>
-            <a href='#' id="details">DETAILS</a>
-            <a href="#" className="btn btn-primary" id="add_to_cart" onClick={() => { this.handleClick(item.id) }}>Add to Cart</a>
+
+        <div className="col-4" key={item.id}>
+          <div className="card" style={{ width: '14rem' }} >
+            <img className="card-img-top" src={item.img} alt="Shoes Image" />
+            <div className="card-body">
+              <h5 className="card-title">{item.title}</h5>
+              <p className="card-text"> <strong> ${item.price} </strong></p>
+              <a href='#' id="details">DETAILS</a>
+              <button className="btn btn-primary" id="add_to_cart" onClick={() => { this.handleClick(item.id) }}>Add to Cart</button>
+            </div>
           </div>
         </div>
-
-
       )
-    });
+    }
+
+    );
+
 
     return (
       <>
+        <h2 className="home_title">SHOP</h2>
+        <div className="container" id="Home_component">
+          <div className="row" >
 
-        <div className="container">
 
-          {itemList}
-
+            {itemList}
+          </div>
         </div>
       </>
     );
+
   }
 
 }
@@ -51,7 +61,8 @@ const mapStateToProps = (state: any) => {
 
   return {
 
-    items: state.items
+    items: state.items,
+    totalQuantity: state.totalQuantity
 
   }
 }

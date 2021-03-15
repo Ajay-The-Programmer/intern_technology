@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.copy_write{
+
+  position: relative;
+  bottom: 0px;
+  left: 45%;
+  margin-top: 150px;
+
+}
